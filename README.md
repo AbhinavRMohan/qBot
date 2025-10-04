@@ -6,41 +6,41 @@ qBot - a simple single-turn medical question and answer chatbot using Google's T
 
 This Notebook uses both a Retriever methodology and a Generative methodology. For this particular dataset, the Retriever methodology worked better.
 
-# Overarching Assumptions - Retrieval:
-# - Dataset Coverage: The data sufficiently represents the types of user questions expected in real usage. Unknown or highly novel questions beyond the dataset may not be answered accurately
-# - Answer Accuracy: Each answer in the dataset is factually correct to be returned as-is
-# - Single-Turn Conversations: The system is designed for single-turn queries (question-answer) and does not save a chat history
-# - Text Preprocessing: Lowercase, white space removal port/starboard, punctuation resetting is sufficient to normalize questions and answers for similarity matching
+Overarching Assumptions - Retrieval:
+ - Dataset Coverage: The data sufficiently represents the types of user questions expected in real usage. Unknown or highly novel questions beyond the dataset may not be answered accurately
+ - Answer Accuracy: Each answer in the dataset is factually correct to be returned as-is
+ - Single-Turn Conversations: The system is designed for single-turn queries (question-answer) and does not save a chat history
+ - Text Preprocessing: Lowercase, white space removal port/starboard, punctuation resetting is sufficient to normalize questions and answers for similarity matching
 
-# Retrieval Model:
-# - Model matches a user query to the closest stored question/answer
-# - Pros:
-# -- Safer to implement based on the dataset size, since it will return a real answer from the dataset
-# -- Easier to implement and scales well with dataset size
-# -- No hallucinations, since it is a direct retrieval
-# - Cons:
-# -- Cannot generate new text and is limited to what is in the dataset
-# -- We did not semantically clean the q/a dataset; that means questions can be VERY similarly worded and give DIFFERENT answers still! We only aggregated by exact phraseology and thus, questions may give different answers at times
+Retrieval Model:
+ - Model matches a user query to the closest stored question/answer
+ - Pros:
+   -- Safer to implement based on the dataset size, since it will return a real answer from the dataset
+   -- Easier to implement and scales well with dataset size
+   -- No hallucinations, since it is a direct retrieval
+ - Cons:
+   -- Cannot generate new text and is limited to what is in the dataset
+   -- We did not semantically clean the q/a dataset; that means questions can be VERY similarly worded and give DIFFERENT answers still! We only aggregated by exact phraseology and thus, questions may give different answers at times
 
-# Overarching Assumptions - Generation:
-# - Data:
-# -- A subset of the data will be used for training and assumes that the entirety of the subset used contains sufficient information for training across different subject areas in medicine
-# - Training:
-# -- Limited computational use on free Google Colab - the base model may not be the best usecase here. A larger model would be more appropriate, also more trainability and finetuning would be required
-# -- Adafactor optimizer chosen for efficiency
-# - Use Case:
-# -- Answers were truncated for training, so unsure how informative they would be (I ran into a LOT of issues while determining the model to use, setting it up on my dataset, where to prune, etc)
-# - Evaluation:
-# -- Same as Dataset Coverage above
+Overarching Assumptions - Generation:
+ - Data:
+   -- A subset of the data will be used for training and assumes that the entirety of the subset used contains sufficient information for training across different subject areas in medicine
+ - Training:
+   -- Limited computational use on free Google Colab - the base model may not be the best usecase here. A larger model would be more appropriate, also more trainability and finetuning would be required
+   -- Adafactor optimizer chosen for efficiency
+ - Use Case:
+   -- Answers were truncated for training, so unsure how informative they would be (I ran into a LOT of issues while determining the model to use, setting it up on my dataset, where to prune, etc)
+ - Evaluation:
+   -- Same as Dataset Coverage above
 
-# Generative Model:
-# - Model creates answers based on training data
-# - Pros:
-# -- Can produce answers even for questions not in the dataset (reasoning)
-# -- Can combine information from multiple examples
-# - Cons:
-# -- Requires large datasets or pre-trained LLM fine-tuning
-# -- Risk of hallucinations, especially since the data set is NOT large enough for such a task, and this is dangerous in the medical field (dataset is too small)
+Generative Model:
+ - Model creates answers based on training data
+ - Pros:
+   -- Can produce answers even for questions not in the dataset (reasoning)
+   -- Can combine information from multiple examples
+ - Cons:
+   -- Requires large datasets or pre-trained LLM fine-tuning
+   -- Risk of hallucinations, especially since the data set is NOT large enough for such a task, and this is dangerous in the medical field (dataset is too small)
 
 -----------------------------------------------------------------------------------------------------
 
@@ -60,22 +60,22 @@ BERT Score - BERT looks at the semantic relationship between the generated and r
 
 -----------------------------------------------------------------------------------------------------
 
-## Future Improvements
+Future Improvements
 
-# Hop on the LLM Train -
+Hop on the LLM Train -
 
-# RAG based model
-# - This is a significant step up from even a generative model, since we can evaluate the precision and recall of the retriver through context relevancy and accuracy through answer relevancy and faithfulness
+RAG based model
+ - This is a significant step up from even a generative model, since we can evaluate the precision and recall of the retriver through context relevancy and accuracy through answer relevancy and faithfulness
 
-# Multiturn Conversation:
-# - Storing the chat history will improve UX with them able to have more interactions with the chat bot
+Multiturn Conversation:
+ - Storing the chat history will improve UX with them able to have more interactions with the chat bot
 
-# Dataset expansion
-# - While we could have augmented the dataset with other data, this is something we can consider for the future as well to improve the robustness of the model and coverage
+Dataset expansion
+ - While we could have augmented the dataset with other data, this is something we can consider for the future as well to improve the robustness of the model and coverage
 
-# User input handling:
-# - Handle typos, misspellings, slangs, phraseology, etc. with better NLU methods (parts of speech recognition, name entity recognition, intent classifier)
-# - Handle data quality management better, through more data exploration and analysis (visualization)
+User input handling:
+ - Handle typos, misspellings, slangs, phraseology, etc. with better NLU methods (parts of speech recognition, name entity recognition, intent classifier)
+ - Handle data quality management better, through more data exploration and analysis (visualization)
 
 There is a lot of scope for improvement even within the model used - using a model like Flan-T5, T5-Large, etc.
 
