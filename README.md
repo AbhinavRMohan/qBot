@@ -84,17 +84,17 @@ There is a lot of scope for improvement even within the model used - using a mod
 SAMPLE RESPONSES
 
 Question: treatments for copd
-Generated Answer: treatments for copd include - a combination of drugs and physical therapy to treat copd - injections of copd drugs into the blood - oral copd tablets - topical copd injections - intravenous copd medications copd is one of the most common types of chronic obstructive pulmonary disease in the united states.
+- Generated Answer: treatments for copd include - a combination of drugs and physical therapy to treat copd - injections of copd drugs into the blood - oral copd tablets - topical copd injections - intravenous copd medications copd is one of the most common types of chronic obstructive pulmonary disease in the united states.
 
 Question: causes of glaucoma
-Generated Answer: glaucoma is one of the most common causes of blindness. it occurs in about 1 in 50,000 people worldwide.
+- Generated Answer: glaucoma is one of the most common causes of blindness. it occurs in about 1 in 50,000 people worldwide.
 
 Question: Tell me about vaccines
-Generated Answer: tell me about vaccines. vaccines are medicines that protect against diseases such as polio, tetanus, rubella, and rubella. if you have a vaccine, give it to someone you know who has a virus in your body. you can also take it to a doctor's office for a test of your immune system. Vaccines are safe, effective, and contain no side effects. you should not take vaccines unless you are pregnant or planning to be pregnant. - don't give me any side effects - do not give me a second chance to bevaccinated - tell me what you are doing - how much you are
+- Generated Answer: tell me about vaccines. vaccines are medicines that protect against diseases such as polio, tetanus, rubella, and rubella. if you have a vaccine, give it to someone you know who has a virus in your body. you can also take it to a doctor's office for a test of your immune system. Vaccines are safe, effective, and contain no side effects. you should not take vaccines unless you are pregnant or planning to be pregnant. - don't give me any side effects - do not give me a second chance to bevaccinated - tell me what you are doing - how much you are
 
 Question: What is hypertension?
-Generated Answer: hypertension is a type of arterial hypertension. it occurs in people of all ages and ethnic backgrounds. it is caused by a number of factors, including - the fact that a person's blood pressure is too high or too low to breathe - a lack of oxygen in the blood - lack of exercise - poor diet - inability to control symptoms of hypertension, such as diabetes, heart disease, and stroke - increased risk of certain cancers in people with diabetes and other serious health problems such as heart attack, stroke, and other health problems that affect people with certain diseases such as stroke, diabetes, and diabetes. nih: national heart, lung, and blood institute
+- Generated Answer: hypertension is a type of arterial hypertension. it occurs in people of all ages and ethnic backgrounds. it is caused by a number of factors, including - the fact that a person's blood pressure is too high or too low to breathe - a lack of oxygen in the blood - lack of exercise - poor diet - inability to control symptoms of hypertension, such as diabetes, heart disease, and stroke - increased risk of certain cancers in people with diabetes and other serious health problems such as heart attack, stroke, and other health problems that affect people with certain diseases such as stroke, diabetes, and diabetes. nih: national heart, lung, and blood institute
 
 Question: What is diabetes?
-Generated Answer: diabetes is a condition that affects the blood sugar in your body. it occurs in people of all ages and ethnic backgrounds.
+- Generated Answer: diabetes is a condition that affects the blood sugar in your body. it occurs in people of all ages and ethnic backgrounds.
 
